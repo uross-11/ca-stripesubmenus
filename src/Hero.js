@@ -3,8 +3,10 @@ import phoneImg from './images/phone.svg'
 import { useGlobalContext } from './context'
 
 const Hero = () => {
-  const {closeSubmenu} = useGlobalContext()
-  return <section className='hero'>
+  const { closeSubmenu } = useGlobalContext()
+
+  return (
+  <section className='hero' onMouseOver={closeSubmenu}>
     <div className="hero-center">
       <article className='hero-info'>
         <h1>Payments infrastructure for the Internet</h1>
@@ -19,7 +21,7 @@ const Hero = () => {
         <img src={phoneImg} className='phone-img' alt="phone" />
       </article>
     </div>
-  </section>
+  </section>);
 }
 
 export default Hero
